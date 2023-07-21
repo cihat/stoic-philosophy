@@ -94,6 +94,9 @@ export default function ({}: ThemeVariables) {
     fullWidth: {
       width: '100%',
     },
+    fullMinWidth: {
+      minWidth: "100%"
+    },
     halfWidth: {
       width: '50%',
     },

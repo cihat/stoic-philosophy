@@ -2,7 +2,11 @@ import { ThemeVariables } from '../../@types/theme';
 
 export default function ({}: ThemeVariables) {
   return {
-    logo: require('./assets/images/tom_light.png'),
+    logo: require('./assets/images/logo.png'),
+    settings: {
+      cardImage: require('./assets/images/settings_dark.png'),
+      cardImage2: require('./assets/images/settings_light.png'),
+    },
     sparkles: {
       topLeft: require('./assets/images/sparkles-top-left.png'),
       top: require('./assets/images/sparkles-top.png'),

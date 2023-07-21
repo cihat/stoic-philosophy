@@ -25,6 +25,9 @@ export default function ({ FontSize, Colors }: ThemeVariables) {
     textBold: {
       fontWeight: 'bold',
     },
+    textSemiBold: {
+      fontWeight: '500',
+    },
     textUppercase: {
       textTransform: 'uppercase',
     },
@@ -71,5 +74,14 @@ export default function ({ FontSize, Colors }: ThemeVariables) {
       fontFamily: 'lobster',
       fontWeight: 'normal',
     },
+    textItalic: {
+      fontStyle: 'italic',
+    },
+    textBlack: {
+      color: Colors.textBlack,
+    },
+    textWhite: {
+      color: Colors.textWhite,
+    }
   });
 }

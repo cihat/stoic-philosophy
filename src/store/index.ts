@@ -12,13 +12,12 @@ import {
   Storage,
 } from 'redux-persist';
 import { MMKV } from 'react-native-mmkv';
-
-import { api } from '../services/api';
 import theme from './theme';
+import { quoteApi } from '../services/modules/quoteApi';
 
 const reducers = combineReducers({
   theme,
-  [api.reducerPath]: api.reducer,
+  [quoteApi.reducerPath]: quoteApi.reducer,
 });
 
 const storage = new MMKV();
@@ -52,7 +51,7 @@ const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(api.middleware);
+    }).concat(quoteApi.middleware);
 
     if (__DEV__ && !process.env.JEST_WORKER_ID) {
       const createDebugger = require('redux-flipper').default;
